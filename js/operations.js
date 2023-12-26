@@ -1,17 +1,14 @@
-// Function to get items from LocalStorage
 function getItems() {
     return JSON.parse(localStorage.getItem('items')) || [];
   }
   
-  // Function to set items to LocalStorage
   function setItems(items) {
     localStorage.setItem('items', JSON.stringify(items));
   }
   
-  // Function to render items
   function renderItems(filteredItems) {
     const itemList = document.getElementById('itemList');
-    itemList.innerHTML = ''; // Clear the list before rendering
+    itemList.innerHTML = ''; 
   
     const items = filteredItems || getItems();
   
@@ -32,7 +29,6 @@ function getItems() {
     });
   }
   
-  // Function to open the edit form
   function openEditForm(index) {
     const items = getItems();
     const item = items[index];
@@ -47,7 +43,7 @@ function getItems() {
     }
   }
   
-  // Function to confirm item deletion
+
   function confirmDeleteItem(index) {
     const confirmation = confirm('Are you sure you want to delete this item?');
   
@@ -56,7 +52,7 @@ function getItems() {
     }
   }
   
-  // Function to delete an item
+
   function deleteItem(index) {
     const items = getItems();
     items.splice(index, 1);
@@ -64,7 +60,7 @@ function getItems() {
     renderItems();
   }
   
-  // Function to create a new item
+
   function createNewItem() {
     const itemName = document.getElementById('itemName').value;
     const itemPrice = document.getElementById('itemPrice').value;
@@ -76,18 +72,15 @@ function getItems() {
       setItems(items);
       renderItems();
   
-      // Clear the create form
       document.getElementById('itemName').value = '';
       document.getElementById('itemPrice').value = '';
   
-      // Hide the create form
       document.getElementById('createForm').style.display = 'none';
     } else {
       alert('Please enter both name and price.');
     }
   }
   
-  // Function to sort items by a specific parameter
   function sortItems(parameter) {
     const items = getItems();
   
@@ -101,17 +94,17 @@ function getItems() {
     renderItems();
   }
   
-  // Function to search items by name
+  
   function searchItemsByName(name) {
     const items = getItems();
   
     const filteredItems = items.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
   
-    // Render only the filtered items
+    
     renderItems(filteredItems);
   }
   
-  // Function to calculate the total sum of a specific parameter for all items
+
   function calculateTotalSum(parameter) {
     const items = getItems();
   

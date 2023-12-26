@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Render existing items on page load
+    
     renderItems();
   });
   

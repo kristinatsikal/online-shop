@@ -115,21 +115,19 @@ body {
     }
   }
  
-  /* style.css */
-
-/* Оновлені стилі для форми */
+  
 #createForm {
     display: none;
     max-width: 1000px;
     margin: 20px auto;
-    text-align: center; /* Це вирівнює текст по центру */
+    text-align: center; 
   }
-  /* Змінено стилі для елементів у формі */
+  
   #createForm label,
   #createForm input,
   #createForm button {
-    display: inline-block; /* Змінено display на inline-block */
-    margin-bottom: 10px; /* Змінено margin-bottom для створення проміжку між рядками елементів */
+    display: inline-block; 
+    margin-bottom: 10px; 
   }
   
   button {

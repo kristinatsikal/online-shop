@@ -13,10 +13,9 @@
     <h1>Online Shop</h1>
     <button onclick="openCreateForm()">Create New Item</button>
 
-    <!-- Existing item list -->
+    
     <ul id="itemList"></ul>
 
-    <!-- Buttons for sorting, searching, and calculating total sum -->
     <button onclick="sortItems('name')">Sort by Name</button>
     <button onclick="sortItems('price')">Sort by Price</button>
 
@@ -26,7 +25,7 @@
     <button onclick="calculateTotalSum('price')">Calculate Total Price</button>
   </div>
 
-  <!-- Create Form -->
+  
   <div id="createForm" style="display: none;">
     <label for="itemName">Name:</label>
     <input type="text" id="itemName">
@@ -37,7 +36,6 @@
     <button onclick="createNewItem()">Save Item</button>
   </div>
 
-  <!-- JavaScript files -->
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/operations.js"></script>
 </body>
