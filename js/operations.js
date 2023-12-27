@@ -6,7 +6,6 @@ let itemsArray = [
   { name: 'Пальто', price: 60, category: 'Верхній одяг' },
   { name: 'Куртка', price: 45, category: 'Верхній одяг' },
   { name: 'Дублянка', price: 70, category: 'Верхній одяг' },
-  // і так далі...
 ];
 
 const itemsKey = 'items';
@@ -21,8 +20,6 @@ function setItems(items) {
 }
 
 function getSelectedItem() {
-  // Реалізуйте логіку отримання обраного елемента (ви можете використовувати id, наприклад)
-  // Повертаєте елемент для редагування
 }
 
 function editItem(item, newName, newPrice) {
