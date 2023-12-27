@@ -12,32 +12,51 @@
   <div id="app">
     <h1>Online Shop</h1>
     <button onclick="openCreateForm()">Create New Item</button>
-
+    <div id="createForm" style="display: none;">
+      <label for="itemName">Name:</label>
+      <input type="text" id="itemName">
+  
+      <label for="itemPrice">Price:</label>
+      <input type="text" id="itemPrice">
+  
+      <label for="itemCategory">Category:</label>
+      <input type="text" id="itemCategory">
+      <button onclick="createNewItem()">Save Item</button>
+    </div>
     
-    <ul id="itemList"></ul>
+    <div id="editForm" style="display: none;">
+      <label for="editItemName">New Name:</label>
+      <input type="text" id="editItemName">
+  
+      <label for="editItemPrice">New Price:</label>
+      <input type="text" id="editItemPrice">
+  
+      <button onclick="saveEditedItem()">Save Changes</button>
+      <button onclick="closeEditForm()">Cancel</button>
+    </div>
+    
+    <div id="sidebar">
+      <h2>All Categories</h2>
+      <div id="categoryList"></div>
+    </div>
+
+    <div id="clothing-categories">
+      <div id="category-clothing">
+        <h2>Clothing Category</h2>
+        <ul class="category-container" id="itemList"></ul>
+      </div>
+    </div>
 
     <button onclick="sortItems('name')">Sort by Name</button>
     <button onclick="sortItems('price')">Sort by Price</button>
-
+  
     <input type="text" id="searchInput" placeholder="Search by Name">
     <button onclick="searchItemsByName(document.getElementById('searchInput').value)">Search</button>
-
     <button onclick="calculateTotalSum('price')">Calculate Total Price</button>
   </div>
 
-  
-  <div id="createForm" style="display: none;">
-    <label for="itemName">Name:</label>
-    <input type="text" id="itemName">
-
-    <label for="itemPrice">Price:</label>
-    <input type="text" id="itemPrice">
-
-    <button onclick="createNewItem()">Save Item</button>
-  </div>
-
-  <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/operations.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
