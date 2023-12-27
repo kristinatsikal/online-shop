@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shop</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <h1>Online Shop</h1>
+    <button onclick="openCreateForm()">Create New Item</button>
+
+    
+    <ul id="itemList"></ul>
+
+    <button onclick="sortItems('name')">Sort by Name</button>
+    <button onclick="sortItems('price')">Sort by Price</button>
+
+    <input type="text" id="searchInput" placeholder="Search by Name">
+    <button onclick="searchItemsByName(document.getElementById('searchInput').value)">Search</button>
+
+    <button onclick="calculateTotalSum('price')">Calculate Total Price</button>
+  </div>
+
+  
+  <div id="createForm" style="display: none;">
+    <label for="itemName">Name:</label>
+    <input type="text" id="itemName">
+
+    <label for="itemPrice">Price:</label>
+    <input type="text" id="itemPrice">
+
+    <button onclick="createNewItem()">Save Item</button>
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/operations.js"></script>
+</body>
+
+</html>
